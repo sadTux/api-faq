@@ -1,6 +1,6 @@
-from pydantic import BaseConfig, conint
+from pydantic import BaseSettings, conint
 
-class Config(BaseConfig):
+class Config(BaseSettings):
     DB_URL: str
 
     class Config:

@@ -1,8 +1,10 @@
-from pydantic import BaseConfig
+from pydantic import BaseConfig, conint
 
-class config(BaseConfig):
+class Config(BaseConfig):
     DB_URL: str
 
     class Config:
         case_sensitive = True
         env_file = ".env"
+
+configuracoes = Config()
